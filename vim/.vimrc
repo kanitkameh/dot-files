@@ -14,7 +14,8 @@ set relativenumber
 
 "Color syntax highlighting
 syntax on 
-
+" Make it so that a curly brace automatically inserts an indented line
+inoremap {<CR> {<CR>}<Esc>O<Tab>
 "Setting arrow keys to do nothing
 nnoremap <Left> <Nop>
 vnoremap <Left> <Nop>
