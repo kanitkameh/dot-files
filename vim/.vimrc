@@ -7,16 +7,17 @@ filetype plugin on
 filetype indent on 
 
 filetype plugin indent on    " required
-"Shows row number on the left
+" Shows row number on the left
 set number
-"Shows the rows number relative to the current row except for the current row which is counted from the start of the file
+" Shows the rows number relative to the current row except for the current row which is counted from the start of the file
 set relativenumber
-
-"Color syntax highlighting
+"Share clipboard with the system
+set clipboard=unnamedplus 
+" Color syntax highlighting
 syntax on 
 " Make it so that a curly brace automatically inserts an indented line
-inoremap {<CR> {<CR>}<Esc>O<Tab>
-"Setting arrow keys to do nothing
+inoremap {<CR> {<CR>}<Esc>O
+" Setting arrow keys to do nothing
 nnoremap <Left> <Nop>
 vnoremap <Left> <Nop>
 inoremap <Left> <Nop>
@@ -40,6 +41,9 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
+Plugin 'tpope/vim-fugitive'
+Plugin 'Yggdroot/indentLine'
+Plugin 'vim-airline/vim-airline'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'luochen1990/rainbow'
