@@ -174,10 +174,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
-# Set keyboard language and layout
-exec "setxkbmap -layout 'us,bg' -variant ',phonetic' -option 'grp:alt_shift_toggle'"
-exec "setxkbmap -option 'grp:alt_shift_toggle'"
 bindsym Print exec print-screen
