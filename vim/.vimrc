@@ -64,3 +64,4 @@ call vundle#end()            " required
 let g:ycm_global_ycm_extra_conf = '/kanitkameh/.vim/.ycm_extra_conf.py' 
 
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+autocmd VimLeave * call system("echo -n $'" . escape(getreg(), "'") . "' | xsel -ib")
