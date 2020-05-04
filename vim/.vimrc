@@ -48,6 +48,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'luochen1990/rainbow'
 Plugin 'Raimondi/delimitMate'
+Plugin 'drmikehenry/vim-headerguard'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " To ignore plugin indent changes, instead use:
@@ -61,7 +62,7 @@ call vundle#end()            " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-let g:ycm_global_ycm_extra_conf = '/kanitkameh/.vim/.ycm_extra_conf.py' 
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py' 
 
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 autocmd VimLeave * call system("echo -n $'" . escape(getreg(), "'") . "' | xsel -ib")
