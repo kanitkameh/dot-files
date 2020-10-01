@@ -1,4 +1,6 @@
 set nocompatible              " be iMproved, required
+set encoding=utf-8 " required by youcompleteme plugin"
+colorscheme torte
 " detect filetypes
 filetype on       
 " load plugins for corresponding filetypes
@@ -18,21 +20,21 @@ syntax on
 " Make it so that a curly brace automatically inserts an indented line
 inoremap {<CR> {<CR>}<Esc>O
 " Setting arrow keys to do nothing
-nnoremap <Left> <Nop>
-vnoremap <Left> <Nop>
-inoremap <Left> <Nop>
-
-nnoremap <Right> <Nop>
-vnoremap <Right> <Nop>
-inoremap <Right> <Nop>
-
-nnoremap <Up> <Nop>
-vnoremap <Up> <Nop>
-inoremap <Up> <Nop>
-
-nnoremap <Down> <Nop>
-vnoremap <Down> <Nop>
-inoremap <Down> <Nop>
+"nnoremap <Left> <Nop>
+"vnoremap <Left> <Nop>
+"inoremap <Left> <Nop>
+"
+"nnoremap <Right> <Nop>
+"vnoremap <Right> <Nop>
+"inoremap <Right> <Nop>
+"
+"nnoremap <Up> <Nop>
+"vnoremap <Up> <Nop>
+"inoremap <Up> <Nop>
+"
+"nnoremap <Down> <Nop>
+"vnoremap <Down> <Nop>
+"inoremap <Down> <Nop>
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
