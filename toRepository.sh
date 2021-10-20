@@ -16,3 +16,5 @@ if test -f "$BASHRC"; then
 	echo "$BASHRC found"
 	cp ~/.bashrc bash/.bashrc
 fi
+cp ~/.p10k.zsh zsh
+cp ~/.zshrc zsh
