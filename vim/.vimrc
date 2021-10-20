@@ -51,6 +51,7 @@ Plugin 'ycm-core/YouCompleteMe'
 Plugin 'luochen1990/rainbow'
 Plugin 'Raimondi/delimitMate'
 Plugin 'drmikehenry/vim-headerguard'
+Plugin 'scrooloose/nerdtree'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " To ignore plugin indent changes, instead use:
@@ -70,3 +71,9 @@ call vundle#end()            " required
 
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 autocmd VimLeave * call system("echo -n $'" . escape(getreg(), "'") . "' | xsel -ib")
+
+" NERDTree
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
