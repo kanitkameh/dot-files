@@ -7,34 +7,27 @@ filetype on
 filetype plugin on
 " load indents for corresponding filetypes
 filetype indent on 
-
 filetype plugin indent on    " required
 " Shows row number on the left
 set number
 " Shows the rows number relative to the current row except for the current row which is counted from the start of the file
 set relativenumber
 "Share clipboard with the system
-set clipboard=unnamedplus 
+set clipboard=unnamed
 " Color syntax highlighting
 syntax on 
-" Make it so that a curly brace automatically inserts an indented line
-inoremap {<CR> {<CR>}<Esc>O
+" use spaces in stead of tabs
+set expandtab
+
+" move lines on the screen rather than physical lines
+nnoremap j gj
+nnoremap k gk
+
 " Setting arrow keys to do nothing
-"nnoremap <Left> <Nop>
-"vnoremap <Left> <Nop>
-"inoremap <Left> <Nop>
-"
-"nnoremap <Right> <Nop>
-"vnoremap <Right> <Nop>
-"inoremap <Right> <Nop>
-"
-"nnoremap <Up> <Nop>
-"vnoremap <Up> <Nop>
-"inoremap <Up> <Nop>
-"
-"nnoremap <Down> <Nop>
-"vnoremap <Down> <Nop>
-"inoremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+noremap <Up> <Nop>
+noremap <Down> <Nop>
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -68,6 +61,20 @@ call vundle#end()            " required
 
 " If needed to add custom config for ycm(this is the path to the default one)
 " let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py' 
+let g:ycm_global_ycm_extra_conf = '~/Documents/Test/C++/ycm-global-config/.ycm_extra_conf.py'
+let g:ycm_semantic_triggers =  {
+  \   'c': ['->', '.'],
+  \   'objc': ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
+  \            're!\[.*\]\s'],
+  \   'ocaml': ['.', '#'],
+  \   'cpp,cuda,objcpp': ['->', '.', '::'],
+  \   'perl': ['->'],
+  \   'php': ['->', '::'],
+  \   'cs,d,elixir,go,groovy,java,javascript,julia,perl6,python,scala,typescript,vb': ['.'],
+  \   'ruby,rust': ['.', '::'],
+  \   'lua': ['.', ':'],
+  \   'erlang': [':'],
+  \ }
 
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 autocmd VimLeave * call system("echo -n $'" . escape(getreg(), "'") . "' | xsel -ib")
