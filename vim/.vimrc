@@ -18,6 +18,7 @@ set clipboard=unnamed
 syntax on 
 " use spaces in stead of tabs
 set expandtab
+set tabstop=4
 
 " move lines on the screen rather than physical lines
 nnoremap j gj
