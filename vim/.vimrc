@@ -1,6 +1,11 @@
 set nocompatible              " be iMproved, required
 set encoding=utf-8 " required by youcompleteme plugin"
 colorscheme torte
+
+" Map Bulgarian keychords to English ones in vim.
+" NOTE: compound maps won't work
+set langmap+=чявертъуиопшщасдфгхйклзьцжбнмЧЯВЕРТЪУИОПШЩАСДФГХЙКЛЗѝЦЖБНМ;`qwertyuiop[]asdfghjklzxcvbnm~QWERTYUIOP{}ASDFGHJKLZXCVBNM,ю\\,Ю\|,
+
 " detect filetypes
 filetype on       
 " load plugins for corresponding filetypes
@@ -20,6 +25,12 @@ syntax on
 set expandtab
 set tabstop=4
 
+" resize splits
+nnoremap <up>    5<C-w>-
+nnoremap <down>  5<C-w>+
+nnoremap <left>  10<C-w><
+nnoremap <right> 10<C-w>>
+
 " move lines on the screen rather than physical lines
 nnoremap j gj
 nnoremap k gk
@@ -29,6 +40,15 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 noremap <Up> <Nop>
 noremap <Down> <Nop>
+
+" INSERT_MAPS:
+" easier insert mode + cyrillic
+inoremap jj <esc>
+inoremap kj <esc>
+inoremap jk <esc>
+inoremap йй <esc>
+inoremap кк <esc>
+inoremap кй <esc>
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
