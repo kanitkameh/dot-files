@@ -24,6 +24,7 @@ syntax on
 " use spaces in stead of tabs
 set expandtab
 set tabstop=4
+set shiftwidth=4
 
 " resize splits
 nnoremap <Up>    5<C-w>-
