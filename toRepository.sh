@@ -7,7 +7,8 @@ YABAIRC=~/.yabairc
 SPACEBARRC=~/.config/spacebar/spacebarrc 
 SKHDRC=~/.skhdrc
 copyLinuxSpecific(){
-    # Empty for now
+    # Not implemented yet
+    :
 }
 copyCommon () {
     if test -f "$VIMRC"; then

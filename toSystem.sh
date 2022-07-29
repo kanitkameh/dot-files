@@ -16,7 +16,8 @@ copyCommon () {
     cp zsh/.zshrc ~/.zshrc
 }
 copyLinuxSpecific () {
-    # Empty for now
+    # Not implemented yet
+    :
 }
 
 case $1 in 
