@@ -45,6 +45,9 @@ inoremap йй <esc>
 inoremap кк <esc>
 inoremap кй <esc>
 
+" Fix for shift=tab
+exe 'set t_kB=' . nr2char(27) . '[Z'
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
