@@ -28,8 +28,8 @@ set tabstop=4
 " resize splits
 nnoremap <Up>    5<C-w>-
 nnoremap <Down>  5<C-w>+
-nnoremap <Left>  10<C-w><
-nnoremap <Right> 10<C-w>>
+nnoremap <Right>  10<C-w><
+nnoremap <Left> 10<C-w>>
 
 " move lines on the screen rather than physical lines
 nnoremap j gj
