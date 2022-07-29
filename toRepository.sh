@@ -6,8 +6,28 @@ BASHRC=~/.bashrc
 YABAIRC=~/.yabairc 
 SPACEBARRC=~/.config/spacebar/spacebarrc 
 SKHDRC=~/.skhdrc
-case $1 in 
-    MacOS)
+copyLinuxSpecific(){
+    # Empty for now
+}
+copyCommon () {
+    if test -f "$VIMRC"; then
+        echo "$VIMRC found"
+        cp ~/.vimrc vim/.vimrc
+    fi
+
+    if test -f "$I3CONF"; then
+        echo "$I3CONF found"
+        cp ~/.config/i3/config i3/config
+    fi
+
+    if test -f "$BASHRC"; then
+        echo "$BASHRC found"
+        cp ~/.bashrc bash/.bashrc
+    fi
+    cp ~/.p10k.zsh zsh
+    cp ~/.zshrc zsh
+}
+copyMacSpecific () {
         if test -f "$YABAIRC"; then
             echo "$YABAIRC found"
             cp $YABAIRC yabai/.yabairc
@@ -20,32 +40,15 @@ case $1 in
             echo "$SKHDRC found"
             cp $SKHDRC skhd/.skhdrc
         fi
-        if test -f "$VIMRC"; then
-            echo "$VIMRC found"
-            cp ~/.vimrc vim/.vimrc
-        fi
-        if test -f "$BASHRC"; then
-            echo "$BASHRC found"
-            cp ~/.bashrc bash/.bashrc
-        fi
-        cp ~/.p10k.zsh zsh
-        cp ~/.zshrc zsh
+}
+case $1 in 
+    MacOS)
+        copyCommon
+        copyMacSpecific
         ;;
     Linux)
-        if test -f "$VIMRC"; then
-            echo "$VIMRC found"
-            cp ~/.vimrc vim/.vimrc
-        fi
-
-        if test -f "$I3CONF"; then
-            echo "$I3CONF found"
-            cp ~/.config/i3/config i3/config
-        fi
-
-        if test -f "$BASHRC"; then
-            echo "$BASHRC found"
-            cp ~/.bashrc bash/.bashrc
-        fi
+        copyCommon
+        copyLinuxSpecific
         ;;
     *)
         echo "Please enter a valid OS(MacOS/Linux) as an argument"
