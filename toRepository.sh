@@ -7,8 +7,10 @@ YABAIRC=~/.yabairc
 SPACEBARRC=~/.config/spacebar/spacebarrc 
 SKHDRC=~/.skhdrc
 copyLinuxSpecific(){
-    # Not implemented yet
-    :
+    if test -f "$I3CONF"; then
+        echo "$I3CONF found"
+        cp ~/.config/i3/config i3/config
+    fi
 }
 copyCommon () {
     if test -f "$VIMRC"; then
@@ -16,10 +18,6 @@ copyCommon () {
         cp ~/.vimrc vim/.vimrc
     fi
 
-    if test -f "$I3CONF"; then
-        echo "$I3CONF found"
-        cp ~/.config/i3/config i3/config
-    fi
 
     if test -f "$BASHRC"; then
         echo "$BASHRC found"
