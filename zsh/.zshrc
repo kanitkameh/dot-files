@@ -116,5 +116,8 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
+# Fuzzy search 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#export FZF_DEFAULT_OPTS='-—height=40 -—preview="cat {}" -—preview-window=right:60%:wrap'
+
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
