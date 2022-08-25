@@ -117,3 +117,4 @@ export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
