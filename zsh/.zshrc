@@ -121,3 +121,13 @@ export PATH="/usr/local/sbin:$PATH"
 #export FZF_DEFAULT_OPTS='-—height=40 -—preview="cat {}" -—preview-window=right:60%:wrap'
 
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+
+# For managing multiple java versions 
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+# For managing node versions
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
