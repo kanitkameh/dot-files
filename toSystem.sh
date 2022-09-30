@@ -1,3 +1,8 @@
+VIMRC=~/.vimrc 
+BASHRC=~/.bashrc 
+WARPDCONFIG=~/.config/warpd/config
+
+I3CONFIG=~/.config/i3/config
 copyMacSpecific () {
     # Mac Specific
     YABAIRC=~/.yabairc 
@@ -8,14 +13,15 @@ copyMacSpecific () {
     cp skhd/.skhdrc $SKHDRC
 }
 copyCommon () {
-    cp vim/.vimrc ~/.vimrc 
-    cp bash/.bashrc ~/.bashrc 
+    cp vim/.vimrc $VIMRC
+    cp bash/.bashrc $BASHRC
+    cp warpd/config $WARPDCONFIG
 
     cp zsh/.p10k.zsh ~/.p10k.zsh 
-    cp zsh/.zshrc ~/.zshrc
+    cp zsh/.zshrc ~/.zshr
 }
 copyLinuxSpecific () {
-    cp i3/config ~/.config/i3/config
+    cp i3/config $I3CONFIG
 }
 
 case $1 in 

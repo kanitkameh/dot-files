@@ -1,43 +1,45 @@
 #!/bin/bash
 VIMRC=~/.vimrc 
-I3CONF=~/.config/i3/config
+I3CONFIG=~/.config/i3/config
 BASHRC=~/.bashrc 
+WARPDCONFIG=~/.config/warpd/config
 
 YABAIRC=~/.yabairc 
 SPACEBARRC=~/.config/spacebar/spacebarrc 
 SKHDRC=~/.skhdrc
 copyLinuxSpecific(){
-    if test -f "$I3CONF"; then
-        echo "$I3CONF found"
+    if test -f "$I3CONFIG"; then
+        echo "$I3CONFIG found"
         cp ~/.config/i3/config i3/config
     fi
 }
 copyCommon () {
     if test -f "$VIMRC"; then
         echo "$VIMRC found"
-        cp ~/.vimrc vim/.vimrc
+        cp $VIMRC vim/
     fi
 
 
     if test -f "$BASHRC"; then
         echo "$BASHRC found"
-        cp ~/.bashrc bash/.bashrc
+        cp $BASHRC bash/
     fi
-    cp ~/.p10k.zsh zsh
-    cp ~/.zshrc zsh
+    cp ~/.p10k.zsh zsh/
+    cp ~/.zshrc zsh/
+    cp $WARPDCONFIG warpd/
 }
 copyMacSpecific () {
         if test -f "$YABAIRC"; then
             echo "$YABAIRC found"
-            cp $YABAIRC yabai/.yabairc
+            cp $YABAIRC yabai/
         fi
         if test -f "$SPACEBARRC"; then
             echo "$SPACEBARRC found"
-            cp $SPACEBARRC spacebar/spacebarrc
+            cp $SPACEBARRC spacebar/
         fi
         if test -f "$SKHDRC"; then
             echo "$SKHDRC found"
-            cp $SKHDRC skhd/.skhdrc
+            cp $SKHDRC skhd/
         fi
 }
 case $1 in 
