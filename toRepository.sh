@@ -1,8 +1,10 @@
-#!/bin/bash
+#jjj!/bin/bash
 VIMRC=~/.vimrc 
 I3CONFIG=~/.config/i3/config
 BASHRC=~/.bashrc 
 WARPDCONFIG=~/.config/warpd/config
+
+KMONADKEYBOARD=~/Documents/kmonad-config/
 
 YABAIRC=~/.yabairc 
 SPACEBARRC=~/.config/spacebar/spacebarrc 
@@ -27,6 +29,7 @@ copyCommon () {
     cp ~/.p10k.zsh zsh/
     cp ~/.zshrc zsh/
     cp $WARPDCONFIG warpd/
+    cp -R $KMONADKEYBOARD kmonad/
 }
 copyMacSpecific () {
         if test -f "$YABAIRC"; then

@@ -1,6 +1,7 @@
 VIMRC=~/.vimrc 
 BASHRC=~/.bashrc 
 WARPDCONFIG=~/.config/warpd/config
+KMONADKEYBOARD=~/Documents/kmonad-config/
 
 I3CONFIG=~/.config/i3/config
 copyMacSpecific () {
@@ -19,6 +20,7 @@ copyCommon () {
 
     cp zsh/.p10k.zsh ~/.p10k.zsh 
     cp zsh/.zshrc ~/.zshr
+    cp -R kmonad/ $KMONADKEYBOARD
 }
 copyLinuxSpecific () {
     cp i3/config $I3CONFIG

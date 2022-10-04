@@ -1,0 +1,56 @@
+(defcfg
+    ;;For MacOS
+    input (iokit-name)
+
+    output (kext)
+
+    ;; Comment this is you want unhandled events not to be emitted
+    fallthrough true
+
+    ;; Set this to false to disable any command-execution in KMonad
+    allow-cmd true
+)
+
+(defsrc 
+    caps a s d f g h j k l ;
+        lmet           rmet
+)
+
+(defalias
+    numbers_button_tab (tap-hold-next-release 200 tab (layer-toggle numbers))
+    numbers_button_enter (tap-hold-next-release 200 enter (layer-toggle numbers))
+)
+
+(defalias
+    ctl_a (tap-hold-next-release 200 a lctl)
+    alt_s (tap-hold-next-release 200 s lalt)
+    met_d (tap-hold-next-release 200 d lmet)
+    sft_f (tap-hold-next-release 200 f lsft)
+
+    sft_j (tap-hold-next-release 200 j rsft)
+    met_k (tap-hold-next-release 200 k rmet)
+    alt_l (tap-hold-next-release 200 l lalt)
+    ctl_; (tap-hold-next-release 200 ; rctl)
+)
+
+(deflayer homerowmods
+  esc @ctl_a   @alt_s   @met_d   @sft_f g h  @sft_j   @met_k   @alt_l   @ctl_;   
+                @numbers_button_tab                   @numbers_button_enter
+)
+
+(defalias
+    ctl_1 (tap-hold-next-release 200 1 lctl)
+    alt_2 (tap-hold-next-release 200 2 lalt)
+    met_3 (tap-hold-next-release 200 3 lmet)
+    sft_4 (tap-hold-next-release 200 4 lsft)
+
+    sft_7 (tap-hold-next-release 200 7 rsft)
+    met_8 (tap-hold-next-release 200 8 rmet)
+    alt_9 (tap-hold-next-release 200 9 lalt)
+    ctl_0 (tap-hold-next-release 200 0 rctl)
+)
+
+(deflayer numbers
+  esc @ctl_1   @alt_2   @met_3   @sft_4 5 6  @sft_7   @met_8   @alt_9   @ctl_0   
+                    -                                       -
+)
