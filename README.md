@@ -4,6 +4,7 @@ Just clone the repository and edit the configuration files and scripts(in case y
 If you want to keep your configurations files in your own github repo then fork this one and clone yours instead.
 ```
 git clone git@github.com:kanitkameh/dot-files.git
+cd dot-files
 ```
 # Scripts/Commands
 All scripts should be executed from inside of the root directory of the repo you cloned
