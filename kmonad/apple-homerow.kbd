@@ -13,12 +13,13 @@
 
 (defsrc 
     caps a s d f g h j k l ;
-        lmet           rmet
+        lmet space rmet
 )
 
 (defalias
-    numbers_button_tab (tap-hold-next-release 200 tab (layer-toggle numbers))
-    numbers_button_enter (tap-hold-next-release 200 enter (layer-toggle numbers))
+    homerow_button_tab (tap-hold-next-release 200 tab (layer-toggle homerowmods_left))
+    homerow_button_enter (tap-hold-next-release 200 enter (layer-toggle homerowmods_right))
+    numbers_button_space (tap-hold-next-release 200 space (layer-toggle numbers))
 )
 
 (defalias
@@ -33,9 +34,19 @@
     ctl_; (tap-hold-next-release 200 ; rctl)
 )
 
-(deflayer homerowmods
-  esc @ctl_a   @alt_s   @met_d   @sft_f g h  @sft_j   @met_k   @alt_l   @ctl_;   
-                @numbers_button_tab                   @numbers_button_enter
+(deflayer start
+  esc     a s d f               g h                  j k l ;
+      @homerow_button_tab @numbers_button_space @homerow_button_enter
+)
+
+(deflayer homerowmods_left
+  _ @ctl_a   @alt_s   @met_d   @sft_f    _ _  _ _ _ _
+                _                         _     _ 
+)
+
+(deflayer homerowmods_right
+  _  _  _  _  _    _ _   @sft_j   @met_k   @alt_l   @ctl_;   
+             _      _               _ 
 )
 
 (defalias
@@ -51,6 +62,6 @@
 )
 
 (deflayer numbers
-  esc @ctl_1   @alt_2   @met_3   @sft_4 5 6  @sft_7   @met_8   @alt_9   @ctl_0   
-                    -                                       -
+  _  @ctl_1   @alt_2   @met_3   @sft_4 5 6  @sft_7   @met_8   @alt_9   @ctl_0   
+                    _                   _                   _
 )
