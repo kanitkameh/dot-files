@@ -20,6 +20,9 @@
     homerow_button_tab (tap-hold-next-release 200 tab (layer-toggle homerowmods_left))
     homerow_button_enter (tap-hold-next-release 200 enter (layer-toggle homerowmods_right))
     numbers_button_space (tap-hold-next-release 200 space (layer-toggle numbers))
+
+    mod_button_tab (tap-hold-next-release 200 tab lmet)
+    mod_button_enter (tap-hold-next-release 200 enter rmet)
 )
 
 (defalias
