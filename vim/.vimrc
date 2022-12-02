@@ -6,6 +6,11 @@ colorscheme torte
 " NOTE: compound maps won't work
 set langmap+=чявертъуиопшщасдфгхйклзьцжбнмЧЯВЕРТЪУИОПШЩАСДФГХЙКЛЗѝЦЖБНМ;`qwertyuiop[]asdfghjklzxcvbnm~QWERTYUIOP{}ASDFGHJKLZXCVBNM,ю\\,Ю\|,
 
+" Highlight search
+set hlsearch
+" Highlight incomplete searches
+set incsearch
+
 " detect filetypes
 filetype on       
 " load plugins for corresponding filetypes
