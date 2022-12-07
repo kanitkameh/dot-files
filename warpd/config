@@ -1,3 +1,4 @@
-scroll_up: y
+scroll_up: u
+scroll_down: d
 hint: f
 hint_activation_key: A-M-f
