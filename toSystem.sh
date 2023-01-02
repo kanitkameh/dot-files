@@ -19,7 +19,7 @@ copyCommon () {
     cp warpd/config $WARPDCONFIG
 
     cp zsh/.p10k.zsh ~/.p10k.zsh 
-    cp zsh/.zshrc ~/.zshr
+    cp zsh/.zshrc ~/.zshrc
     cp -R kmonad/ $KMONADKEYBOARD
 }
 copyLinuxSpecific () {
