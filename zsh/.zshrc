@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/kamen.vakavchiev/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -119,8 +119,6 @@ export PATH="/usr/local/sbin:$PATH"
 # Fuzzy search 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #export FZF_DEFAULT_OPTS='-—height=40 -—preview="cat {}" -—preview-window=right:60%:wrap'
-
-source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 # For managing multiple java versions 
 export PATH="$HOME/.jenv/bin:$PATH"
