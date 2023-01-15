@@ -1,4 +1,4 @@
-#jjj!/bin/bash
+#!/bin/bash
 VIMRC=~/.vimrc 
 I3CONFIG=~/.config/i3/config
 BASHRC=~/.bashrc 
@@ -29,7 +29,7 @@ copyCommon () {
     cp ~/.p10k.zsh zsh/
     cp ~/.zshrc zsh/
     cp $WARPDCONFIG warpd/
-    cp -R $KMONADKEYBOARD kmonad/
+    cp -r -T $KMONADKEYBOARD kmonad/
 }
 copyMacSpecific () {
         if test -f "$YABAIRC"; then
