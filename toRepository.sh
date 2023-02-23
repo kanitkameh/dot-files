@@ -29,7 +29,7 @@ copyCommon () {
     cp ~/.p10k.zsh zsh/
     cp ~/.zshrc zsh/
     cp $WARPDCONFIG warpd/
-    cp -r -T $KMONADKEYBOARD kmonad/
+    cp -R $KMONADKEYBOARD/ kmonad/
 }
 copyMacSpecific () {
         if test -f "$YABAIRC"; then
