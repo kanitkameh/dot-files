@@ -20,7 +20,7 @@ copyCommon () {
 
     cp zsh/.p10k.zsh ~/.p10k.zsh 
     cp zsh/.zshrc ~/.zshrc
-    cp -r -T kmonad/ $KMONADKEYBOARD
+    cp -r kmonad/. $KMONADKEYBOARD
 }
 copyLinuxSpecific () {
     cp i3/config $I3CONFIG
