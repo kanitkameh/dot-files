@@ -38,9 +38,11 @@ nnoremap <Down>  5<C-w>+
 nnoremap <Right>  10<C-w><
 nnoremap <Left> 10<C-w>>
 
-" move lines on the screen rather than physical lines
-nnoremap j gj
-nnoremap k gk
+" move in wrapped lines when no count prefix
+nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
+nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
+xnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
+xnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
 
 " INSERT_MAPS:
 " easier insert mode + cyrillic
