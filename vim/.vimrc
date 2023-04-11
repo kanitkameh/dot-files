@@ -18,12 +18,13 @@ filetype plugin on
 " load indents for corresponding filetypes
 filetype indent on 
 filetype plugin indent on    " required
+
 " Shows row number on the left
 set number
 " Shows the rows number relative to the current row except for the current row which is counted from the start of the file
 set relativenumber
 "Share clipboard with the system
-set clipboard=unnamed
+set clipboard=unnamed,unnamedplus
 " Color syntax highlighting
 syntax on 
 " use spaces in stead of tabs
@@ -49,6 +50,11 @@ inoremap jk <esc>
 inoremap йй <esc>
 inoremap кк <esc>
 inoremap кй <esc>
+
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+nnoremap <c-h> <c-w>h
 
 " Fix for shift=tab
 exe 'set t_kB=' . nr2char(27) . '[Z'
@@ -117,3 +123,4 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+source /home/kanitkameh/Documents/Programming/Scala/lsp-examples/vimrc.generated
