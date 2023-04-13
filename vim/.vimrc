@@ -125,4 +125,12 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-source /home/kanitkameh/Documents/Programming/Scala/lsp-examples/vimrc.generated
+source ~/Documents/Programming/Scala/lsp-examples/vimrc.generated
+
+"EasyMotion config
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+" Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" `f{char}{label}`
+nmap f <Plug>(easymotion-overwin-f)
+" Turn on case-insensitive feature
+let g:EasyMotion_smartcase = 1
