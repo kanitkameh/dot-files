@@ -6,6 +6,8 @@ colorscheme torte
 " NOTE: compound maps won't work
 set langmap+=чявертъуиопшщасдфгхйклзьцжбнмЧЯВЕРТЪУИОПШЩАСДФГХЙКЛЗѝЦЖБНМ;`qwertyuiop[]asdfghjklzxcvbnm~QWERTYUIOP{}ASDFGHJKLZXCVBNM,ю\\,Ю\|,
 
+" Show incomplete commands in the corner
+set showcmd 
 " Highlight search
 set hlsearch
 " Highlight incomplete searches
@@ -132,5 +134,6 @@ let g:EasyMotion_do_mapping = 0 " Disable default mappings
 " Jump to anywhere you want with minimal keystrokes, with just one key binding.
 " `f{char}{label}`
 nmap f <Plug>(easymotion-overwin-f)
+xmap f <Plug>(easymotion-bd-f)
 " Turn on case-insensitive feature
 let g:EasyMotion_smartcase = 1
