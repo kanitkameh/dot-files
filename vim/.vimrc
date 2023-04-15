@@ -84,6 +84,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'dbakker/vim-paragraph-motion'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'tpope/vim-commentary'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " To ignore plugin indent changes, instead use:
