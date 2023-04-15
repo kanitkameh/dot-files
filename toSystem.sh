@@ -1,4 +1,5 @@
 VIMRC=~/.vimrc 
+IDEAVIMRC=~/.ideavimrc
 BASHRC=~/.bashrc 
 WARPDCONFIG=~/.config/warpd/config
 KMONADKEYBOARD=~/Documents/kmonad-config/
@@ -21,6 +22,7 @@ copyCommon () {
     cp zsh/.p10k.zsh ~/.p10k.zsh 
     cp zsh/.zshrc ~/.zshrc
     cp -r kmonad/. $KMONADKEYBOARD
+    cp ideavimrc/.ideavimrc $IDEAVIMRC
 }
 copyLinuxSpecific () {
     cp i3/config $I3CONFIG

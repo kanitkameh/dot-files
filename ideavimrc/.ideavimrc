@@ -1,0 +1,15 @@
+source ~/.vimrc
+
+"let mapleader="\\"
+
+nmap <Leader> <Plug>(easymotion-prefix)
+xmap <Leader> <Plug>(easymotion-prefix)
+xmap f <Plug>(easymotion-bd-f)
+nmap f <Plug>(easymotion-bd-f)
+
+nnoremap gc :action GotoClass<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gu :action FindUsages<CR>
+nnoremap gp :action GotToSuperMethod<CR>
+nnoremap gb :action Back<CR>
+nnoremap gf :action Forward<CR>

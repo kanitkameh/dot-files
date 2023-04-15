@@ -1,8 +1,3 @@
-set nocompatible              " be iMproved, required
-set encoding=utf-8 " required by youcompleteme plugin"
-colorscheme torte
-
-" Map Bulgarian keychords to English ones in vim.
 " NOTE: compound maps won't work
 set langmap+=чявертъуиопшщасдфгхйклзьцжбнмЧЯВЕРТЪУИОПШЩАСДФГХЙКЛЗѝЦЖБНМ;`qwertyuiop[]asdfghjklzxcvbnm~QWERTYUIOP{}ASDFGHJKLZXCVBNM,ю\\,Ю\|,
 
@@ -41,10 +36,12 @@ nnoremap <Right>  10<C-w><
 nnoremap <Left> 10<C-w>>
 
 " move in wrapped lines when no count prefix
+"ideaVim ignore
 nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
 nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
 xnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
 xnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
+"ideaVim ignore end
 
 " INSERT_MAPS:
 " easier insert mode + cyrillic
@@ -134,7 +131,9 @@ source ~/Documents/Programming/Scala/lsp-examples/vimrc.generated
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 " Jump to anywhere you want with minimal keystrokes, with just one key binding.
 " `f{char}{label}`
+"ideaVim ignore
 nmap f <Plug>(easymotion-overwin-f)
+"ideaVim ignore end
 xmap f <Plug>(easymotion-bd-f)
 " Turn on case-insensitive feature
 let g:EasyMotion_smartcase = 1

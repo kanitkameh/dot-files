@@ -1,5 +1,6 @@
 #!/bin/bash
 VIMRC=~/.vimrc 
+IDEAVIMRC=~/.ideavimrc
 I3CONFIG=~/.config/i3/config
 BASHRC=~/.bashrc 
 WARPDCONFIG=~/.config/warpd/config
@@ -9,6 +10,7 @@ KMONADKEYBOARD=~/Documents/kmonad-config/
 YABAIRC=~/.yabairc 
 SPACEBARRC=~/.config/spacebar/spacebarrc 
 SKHDRC=~/.skhdrc
+
 copyLinuxSpecific(){
     if test -f "$I3CONFIG"; then
         echo "$I3CONFIG found"
@@ -30,6 +32,7 @@ copyCommon () {
     cp ~/.zshrc zsh/
     cp $WARPDCONFIG warpd/
     cp -r $KMONADKEYBOARD. kmonad/
+    cp $IDEAVIMRC ideavimrc/
 }
 copyMacSpecific () {
         if test -f "$YABAIRC"; then
