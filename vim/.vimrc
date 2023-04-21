@@ -96,6 +96,7 @@ call vundle#end()            " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+"YcmConfig
 " If needed to add custom config for ycm(this is the path to the default one)
 " let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py' 
 let g:ycm_global_ycm_extra_conf = '~/Documents/Test/C++/ycm-global-config/.ycm_extra_conf.py'
@@ -112,6 +113,13 @@ let g:ycm_semantic_triggers =  {
   \   'lua': ['.', ':'],
   \   'erlang': [':'],
   \ }
+
+nnoremap gd :YcmCompleter GoTo<CR>
+nnoremap gi :YcmCompleter GoToImplementation<CR>
+nnoremap gr :YcmCompleter GoToReferences<CR>
+nnoremap <leader>t :YcmCompleter GetType<CR>
+nnoremap <leader>fix :YcmCompleter FixIt<CR>
+nnoremap <leader>rn :YcmCompleter RefactorRename 
 
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 autocmd VimLeave * call system("echo -n $'" . escape(getreg(), "'") . "' | xsel -ib")
