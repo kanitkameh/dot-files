@@ -1,0 +1,46 @@
+{
+    "editor.lineNumbers": "relative",
+    "workbench.colorTheme": "Default Dark+",
+    "omnisharp.projectLoadTimeout": 600,
+    "omnisharp.enableImportCompletion": true,
+    "omnisharp.useModernNet": false,
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [ "<leader>", "r", "n" ],
+            "commands": [ "editor.action.rename" ]
+        },
+        {
+            "before": [ "<leader>", "g", "i" ],
+            "commands": [ "editor.action.goToImplementation" ]
+        },
+        {
+            "before": [ "<leader>", "g", "r" ],
+            "commands": [ "editor.action.goToReferences" ]
+        },
+        {
+            "key": "ctrl+h",
+            "command": "workbench.action.focusLeftGroup",
+            "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+        },
+        {
+            "key": "ctrl+l",
+            "command": "workbench.action.focusRightGroup",
+            "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+        },
+        {
+            "key": "ctrl+k",
+            "command": "workbench.action.focusAboveGroup",
+            "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+        },
+        {
+            "key": "ctrl+j",
+            "command": "workbench.action.focusBelowGroup",
+            "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+        }
+    ]
+}
