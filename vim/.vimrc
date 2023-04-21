@@ -121,6 +121,8 @@ nnoremap <leader>t :YcmCompleter GetType<CR>
 nnoremap <leader>fix :YcmCompleter FixIt<CR>
 nnoremap <leader>rn :YcmCompleter RefactorRename 
 
+nnoremap <leader>fzf :FZF<CR>
+
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 autocmd VimLeave * call system("echo -n $'" . escape(getreg(), "'") . "' | xsel -ib")
 
