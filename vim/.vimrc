@@ -8,6 +8,9 @@ set hlsearch
 " Highlight incomplete searches
 set incsearch
 
+set noswapfile
+
+
 " detect filetypes
 filetype on       
 " load plugins for corresponding filetypes
