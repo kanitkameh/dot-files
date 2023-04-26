@@ -7,6 +7,7 @@ xmap <Leader> <Plug>(easymotion-prefix)
 xmap f <Plug>(easymotion-bd-f)
 nmap f <Plug>(easymotion-bd-f)
 
+nnoremap gd :action GotoDeclaration<CR>
 nnoremap gc :action GotoClass<CR>
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gu :action FindUsages<CR>
