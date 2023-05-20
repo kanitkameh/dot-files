@@ -130,3 +130,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 alias vim=/opt/homebrew/bin/vim 
+
+# Proper fzf(skip files in gitignore and directories)
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow'
