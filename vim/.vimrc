@@ -8,8 +8,11 @@ set hlsearch
 " Highlight incomplete searches
 set incsearch
 
+"set spell spelllang=en_us
+
 set noswapfile
 
+set mouse=a
 
 " detect filetypes
 filetype on       
@@ -121,7 +124,7 @@ let g:ycm_semantic_triggers =  {
 nnoremap gd :YcmCompleter GoTo<CR>
 nnoremap gi :YcmCompleter GoToImplementation<CR>
 nnoremap gr :YcmCompleter GoToReferences<CR>
-nnoremap <leader>h :YcmCompleter GetHover<CR>
+nnoremap K <plug>(YCMHover)
 nnoremap <leader>fix :YcmCompleter FixIt<CR>
 nnoremap <leader>rn :YcmCompleter RefactorRename 
 
