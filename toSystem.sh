@@ -13,6 +13,7 @@ copyMacSpecific () {
     cp yabai/.yabairc $YABAIRC
     cp spacebar/spacebarrc $SPACEBARRC
     cp skhd/.skhdrc $SKHDRC
+    cp vscode/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
 }
 copyCommon () {
     cp vim/.vimrc $VIMRC
