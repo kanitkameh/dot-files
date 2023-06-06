@@ -1,6 +1,15 @@
 source ~/.vimrc
 
-"let mapleader="\\"
+set ideajoin
+
+let mapleader="\\"
+
+" Workkaround Fix C-o C-t behaviour (should be fixed if future ideavim
+" versions
+nmap <C-o> :action Back<CR>
+nmap <C-i> :action Forward<CR>
+
+nmap <Leader>rn :action RenameElement<CR>
 
 nmap <Leader> <Plug>(easymotion-prefix)
 xmap <Leader> <Plug>(easymotion-prefix)
