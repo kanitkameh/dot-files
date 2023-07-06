@@ -1,3 +1,5 @@
+set encoding=utf8
+
 " NOTE: compound maps won't work
 set langmap+=чявертъуиопшщасдфгхйклзьцжбнмЧЯВЕРТЪУИОПШЩАСДФГХЙКЛЗѝЦЖБНМ;`qwertyuiop[]asdfghjklzxcvbnm~QWERTYUIOP{}ASDFGHJKLZXCVBNM,ю\\,Ю\|,
 
@@ -21,6 +23,8 @@ filetype plugin on
 " load indents for corresponding filetypes
 filetype indent on 
 filetype plugin indent on    " required
+
+set omnifunc=syntaxcomplete#Complete
 
 " Shows row number on the left
 set number
@@ -89,6 +93,8 @@ Plugin 'dbakker/vim-paragraph-motion'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-commentary'
 Plugin 'dyng/ctrlsf.vim'
+Plugin 'vim-autoformat/vim-autoformat'
+Plugin 'tommcdo/vim-exchange'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " To ignore plugin indent changes, instead use:
@@ -154,3 +160,5 @@ nmap f <Plug>(easymotion-overwin-f)
 xmap f <Plug>(easymotion-bd-f)
 " Turn on case-insensitive feature
 let g:EasyMotion_smartcase = 1
+
+nnoremap <C-S-f> :CtrlSF
