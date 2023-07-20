@@ -4,7 +4,7 @@ set ideajoin
 
 let mapleader="\\"
 
-" Workkaround Fix C-o C-t behaviour (should be fixed if future ideavim
+" Workkaround Fix C-o C-t behaviour (should be fixed in future ideavim
 " versions
 nmap <C-o> :action Back<CR>
 nmap <C-i> :action Forward<CR>
@@ -13,8 +13,12 @@ nmap <Leader>rn :action RenameElement<CR>
 
 nmap <Leader> <Plug>(easymotion-prefix)
 xmap <Leader> <Plug>(easymotion-prefix)
+
 xmap f <Plug>(easymotion-bd-f)
 nmap f <Plug>(easymotion-bd-f)
+
+xmap t <Plug>(easymotion-bd-f)
+nmap t <Plug>(easymotion-bd-f)
 
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gc :action GotoClass<CR>

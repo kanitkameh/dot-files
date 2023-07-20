@@ -153,12 +153,18 @@ source ~/Documents/Programming/Scala/lsp-examples/vimrc.generated
 
 "EasyMotion config
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
+
 " Jump to anywhere you want with minimal keystrokes, with just one key binding.
 " `f{char}{label}`
 "ideaVim ignore
 nmap f <Plug>(easymotion-overwin-f)
 "ideaVim ignore end
 xmap f <Plug>(easymotion-bd-f)
+"ideaVim ignore
+nmap t <Plug>(easymotion-overwin-t)
+"ideaVim ignore end
+xmap t <Plug>(easymotion-bd-t)
+
 " Turn on case-insensitive feature
 let g:EasyMotion_smartcase = 1
 
