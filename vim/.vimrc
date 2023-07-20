@@ -95,6 +95,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'dyng/ctrlsf.vim'
 Plugin 'vim-autoformat/vim-autoformat'
 Plugin 'tommcdo/vim-exchange'
+Plugin 'machakann/vim-highlightedyank'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " To ignore plugin indent changes, instead use:
