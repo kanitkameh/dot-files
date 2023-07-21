@@ -1,6 +1,7 @@
 source ~/.vimrc
 
 set ideajoin
+set ideamarks
 
 let mapleader="\\"
 
@@ -17,8 +18,8 @@ xmap <Leader> <Plug>(easymotion-prefix)
 xmap f <Plug>(easymotion-bd-f)
 nmap f <Plug>(easymotion-bd-f)
 
-xmap t <Plug>(easymotion-bd-f)
-nmap t <Plug>(easymotion-bd-f)
+xmap t <Plug>(easymotion-bd-t)
+nmap t <Plug>(easymotion-bd-t)
 
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gc :action GotoClass<CR>
