@@ -27,3 +27,5 @@ nnoremap gu :action FindUsages<CR>
 nnoremap gp :action GotToSuperMethod<CR>
 nnoremap gb :action Back<CR>
 nnoremap gf :action Forward<CR>
+
+nnoremap <Leader>fzf :action SearchEverywhere<CR>
