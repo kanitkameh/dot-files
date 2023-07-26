@@ -16,7 +16,9 @@ set noswapfile
 
 set mouse=a
 
-set virtualedit=all
+set virtualedit=all "type after end of line"
+
+set wildmenu " display completion matches in a status line
 
 " detect filetypes
 filetype on       
