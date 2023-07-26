@@ -16,6 +16,8 @@ set noswapfile
 
 set mouse=a
 
+set virtualedit=all
+
 " detect filetypes
 filetype on       
 " load plugins for corresponding filetypes
