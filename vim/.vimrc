@@ -3,6 +3,8 @@ set encoding=utf8
 " NOTE: compound maps won't work
 set langmap+=чявертъуиопшщасдфгхйклзьцжбнмЧЯВЕРТЪУИОПШЩАСДФГХЙКЛЗѝЦЖБНМ;`qwertyuiop[]asdfghjklzxcvbnm~QWERTYUIOP{}ASDFGHJKLZXCVBNM,ю\\,Ю\|,
 
+set backspace=indent,eol,start
+
 " Show incomplete commands in the corner
 set showcmd 
 " Highlight search
