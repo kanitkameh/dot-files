@@ -21,6 +21,7 @@ set mouse=a
 set virtualedit=all "type after end of line"
 
 set wildmenu " display completion matches in a status line
+set wildmode=list:longest,full
 
 " detect filetypes
 filetype on       
@@ -177,3 +178,7 @@ xmap t <Plug>(easymotion-bd-t)
 let g:EasyMotion_smartcase = 1
 
 nnoremap <C-S-f> :CtrlSF
+
+" yankwin custom maps
+nnoremap <c-w>vp :call yankwin#Paste({'edit_command': 'rightbelow vertical split'})<cr>
+nnoremap <c-w>vP :call yankwin#Paste({'edit_command': 'leftabove vertical split'})<cr>
