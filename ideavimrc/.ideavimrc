@@ -30,3 +30,6 @@ nnoremap gb :action Back<CR>
 nnoremap gf :action Forward<CR>
 
 nnoremap <Leader>fzf :action SearchEverywhere<CR>
+
+" Using for hover in the lsp in the .vimrc
+unmap K
