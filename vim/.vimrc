@@ -105,6 +105,7 @@ Plugin 'tommcdo/vim-exchange'
 Plugin 'machakann/vim-highlightedyank'
 Plugin 'AndrewRadev/yankwin.vim.git'
 Plugin 'psliwka/vim-smoothie'
+Plugin 'kanitkameh/glabmr.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " To ignore plugin indent changes, instead use:
@@ -141,7 +142,7 @@ nnoremap gd :YcmCompleter GoTo<CR>
 nnoremap gi :YcmCompleter GoToImplementation<CR>
 nnoremap gr :YcmCompleter GoToReferences<CR>
 nnoremap K <plug>(YCMHover)
-nnoremap <leader>fix :YcmCompleter FixIt<CR>
+nnoremap <leader>ca :YcmCompleter FixIt<CR>
 nnoremap <leader>rn :YcmCompleter RefactorRename 
 
 nnoremap <leader>fzf :FZF<CR>
@@ -183,3 +184,7 @@ nnoremap <C-S-f> :CtrlSF
 " yankwin custom maps
 nnoremap <c-w>vp :call yankwin#Paste({'edit_command': 'rightbelow vertical split'})<cr>
 nnoremap <c-w>vP :call yankwin#Paste({'edit_command': 'leftabove vertical split'})<cr>
+
+helptags ALL
+
+packadd! matchit
