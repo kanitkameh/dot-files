@@ -179,7 +179,8 @@ xmap t <Plug>(easymotion-bd-t)
 " Turn on case-insensitive feature
 let g:EasyMotion_smartcase = 1
 
-nnoremap <C-S-f> :CtrlSF
+nnoremap <leader>/ <Plug>CtrlSFPrompt
+vnoremap <leader>/ <Plug>CtrlSFVwordExec
 
 " yankwin custom maps
 nnoremap <c-w>vp :call yankwin#Paste({'edit_command': 'rightbelow vertical split'})<cr>
