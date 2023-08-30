@@ -18,7 +18,7 @@ set noswapfile
 
 set mouse=a
 
-set virtualedit=all "type after end of line"
+set virtualedit=block "type after end of line"
 
 set wildmenu " display completion matches in a status line
 set wildmode=list:longest,full
@@ -101,6 +101,7 @@ Plugin 'machakann/vim-highlightedyank'
 Plugin 'AndrewRadev/yankwin.vim.git'
 Plugin 'psliwka/vim-smoothie'
 Plugin 'kanitkameh/glabmr.vim'
+Plugin 'ziglang/zig.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " To ignore plugin indent changes, instead use:
