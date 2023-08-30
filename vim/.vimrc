@@ -23,13 +23,8 @@ set virtualedit=all "type after end of line"
 set wildmenu " display completion matches in a status line
 set wildmode=list:longest,full
 
-" detect filetypes
-filetype on       
-" load plugins for corresponding filetypes
-filetype plugin on
-" load indents for corresponding filetypes
-filetype indent on 
-filetype plugin indent on    " required
+" detect filetypes and load plugins and indents for corresponding filetypes
+filetype plugin indent on
 
 set omnifunc=syntaxcomplete#Complete
 
