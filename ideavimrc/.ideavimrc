@@ -11,6 +11,7 @@ nmap <C-o> :action Back<CR>
 nmap <C-i> :action Forward<CR>
 
 nmap <Leader>rn :action RenameElement<CR>
+nmap <Leader>run :action RunClass<CR>
 nmap <Leader>ca :action ShowIntentionActions<CR>
 
 nmap <Leader> <Plug>(easymotion-prefix)
