@@ -181,6 +181,7 @@ xmap t <Plug>(easymotion-bd-t)
 let g:EasyMotion_smartcase = 1
 
 nnoremap <leader>/ <Plug>CtrlSFPrompt
+nnoremap <leader>* <Plug>CtrlSFPrompt<C-r><C-w>
 vnoremap <leader>/ <Plug>CtrlSFVwordExec
 
 " yankwin custom maps
