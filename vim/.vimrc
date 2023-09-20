@@ -44,6 +44,8 @@ set shiftwidth=4
 set foldmethod=syntax
 set foldlevelstart=99
 
+set nohidden
+
 " resize splits
 nnoremap <Up>    5<C-w>-
 nnoremap <Down>  5<C-w>+
