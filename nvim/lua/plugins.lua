@@ -67,6 +67,7 @@ vim.opt_global.completeopt = { "menuone", "noinsert", "noselect" }
 
 -- LSP mappings
 map("n", "gd",  vim.lsp.buf.definition)
+map("n", "gD",  vim.lsp.buf.type_definition)
 map("n", "K",  vim.lsp.buf.hover)
 map("n", "gi", vim.lsp.buf.implementation)
 map("n", "gr", vim.lsp.buf.references)
@@ -96,7 +97,7 @@ map("n", "<leader>aw", function()
 end)
 
 -- buffer diagnostics only
-map("n", "<leader>d", vim.diagnostic.setloclist)
+map("n", "<leader>bd", vim.diagnostic.setloclist)
 
 map("n", "[c", function()
     vim.diagnostic.goto_prev({ wrap = false })
