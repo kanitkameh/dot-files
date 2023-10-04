@@ -142,7 +142,7 @@ let g:ycm_semantic_triggers =  {
 nnoremap gd :YcmCompleter GoTo<CR>
 nnoremap gi :YcmCompleter GoToImplementation<CR>
 nnoremap gr :YcmCompleter GoToReferences<CR>
-nnoremap K <plug>(YCMHover)
+nnoremap K <Plug>(YCMHover)
 nnoremap <leader>ca :YcmCompleter FixIt<CR>
 nnoremap <leader>rn :YcmCompleter RefactorRename 
 
