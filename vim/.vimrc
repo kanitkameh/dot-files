@@ -107,6 +107,7 @@ Plugin 'AndrewRadev/yankwin.vim.git'
 Plugin 'psliwka/vim-smoothie'
 Plugin 'kanitkameh/glabmr.vim'
 Plugin 'ziglang/zig.vim'
+Plugin 'rhysd/reply.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " To ignore plugin indent changes, instead use:
@@ -182,7 +183,7 @@ let g:EasyMotion_smartcase = 1
 
 nnoremap <leader>/ <Plug>CtrlSFPrompt
 nnoremap <leader>* <Plug>CtrlSFPrompt<C-r><C-w>
-vnoremap <leader>/ <Plug>CtrlSFVwordExec
+xnoremap <leader>/ <Plug>CtrlSFVwordExec
 
 " yankwin custom maps
 nnoremap <c-w>vp :call yankwin#Paste({'edit_command': 'rightbelow vertical split'})<cr>
@@ -191,3 +192,10 @@ nnoremap <c-w>vP :call yankwin#Paste({'edit_command': 'leftabove vertical split'
 helptags ALL
 
 packadd! matchit
+
+" reply maps
+noremap <leader>rs :ReplSend<CR> 
+noremap <leader>rr :ReplRecv<CR> 
+noremap <leader>ro :Repl<CR> 
+noremap <leader>ra :ReplAuto<CR> 
+noremap <leader>rc :ReplStop<CR> 
