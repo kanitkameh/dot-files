@@ -108,6 +108,7 @@ Plugin 'psliwka/vim-smoothie'
 Plugin 'kanitkameh/glabmr.vim'
 Plugin 'ziglang/zig.vim'
 Plugin 'rhysd/reply.vim'
+Plugin 'liuchengxu/vim-which-key'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " To ignore plugin indent changes, instead use:
@@ -199,3 +200,6 @@ noremap <leader>rr :ReplRecv<CR>
 noremap <leader>ro :Repl<CR> 
 noremap <leader>ra :ReplAuto<CR> 
 noremap <leader>rc :ReplStop<CR> 
+
+" vim-which-key config
+nnoremap <silent> <leader> :WhichKey '\'<CR>
