@@ -33,6 +33,7 @@ copyCommon () {
     cp $WARPDCONFIG warpd/
     cp -r $KMONADKEYBOARD. kmonad/
     cp $IDEAVIMRC ideavimrc/
+    cp ~/.inputrc jline/.inputrc
 }
 copyMacSpecific () {
         if test -f "$YABAIRC"; then

@@ -24,6 +24,7 @@ copyCommon () {
     cp zsh/.zshrc ~/.zshrc
     cp -r kmonad/. $KMONADKEYBOARD
     cp ideavimrc/.ideavimrc $IDEAVIMRC
+    cp jline/.inputrc ~/.inputrc 
 }
 copyLinuxSpecific () {
     cp i3/config $I3CONFIG
