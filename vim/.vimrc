@@ -194,12 +194,19 @@ helptags ALL
 
 packadd! matchit
 
+" TODO do you really want them only normal and visual maps? 
+" do they work in insert mode?
 " reply maps
-noremap <leader>rs :ReplSend<CR> 
-noremap <leader>rr :ReplRecv<CR> 
-noremap <leader>ro :Repl<CR> 
-noremap <leader>ra :ReplAuto<CR> 
-noremap <leader>rc :ReplStop<CR> 
+xnoremap <leader>rs :ReplSend<CR> 
+nnoremap <leader>rs :ReplSend<CR> 
+xnoremap <leader>rr :ReplRecv<CR> 
+nnoremap <leader>rr :ReplRecv<CR> 
+xnoremap <leader>ro :Repl<CR> 
+nnoremap <leader>ro :Repl<CR> 
+xnoremap <leader>ra :ReplAuto<CR> 
+nnoremap <leader>ra :ReplAuto<CR> 
+xnoremap <leader>rc :ReplStop<CR> 
+nnoremap <leader>rc :ReplStop<CR> 
 
 " vim-which-key config
 nnoremap <silent> <leader> :WhichKey '\'<CR>
