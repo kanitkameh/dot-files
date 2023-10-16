@@ -35,3 +35,6 @@ nnoremap <Leader>fzf :action SearchEverywhere<CR>
 
 " Using for hover in the lsp in the .vimrc
 unmap K
+
+nmap [m <Action>(MethodUp)
+nmap ]m <Action>(MethodDown)
