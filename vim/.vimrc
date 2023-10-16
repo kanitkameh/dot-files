@@ -175,9 +175,11 @@ let g:EasyMotion_do_mapping = 0 " Disable default mappings
 nmap f <Plug>(easymotion-overwin-f)
 "ideaVim ignore end
 xmap f <Plug>(easymotion-bd-f)
+omap f <Plug>(easymotion-bd-f)
 
 nmap t <Plug>(easymotion-bd-t)
 xmap t <Plug>(easymotion-bd-t)
+omap t <Plug>(easymotion-bd-t)
 
 " Turn on case-insensitive feature
 let g:EasyMotion_smartcase = 1
