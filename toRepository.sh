@@ -34,6 +34,7 @@ copyCommon () {
     cp -r $KMONADKEYBOARD. kmonad/
     cp $IDEAVIMRC ideavimrc/
     cp ~/.inputrc jline/.inputrc
+    cp -r ~/.config/nvim .
 }
 copyMacSpecific () {
         if test -f "$YABAIRC"; then

@@ -25,6 +25,7 @@ copyCommon () {
     cp -r kmonad/. $KMONADKEYBOARD
     cp ideavimrc/.ideavimrc $IDEAVIMRC
     cp jline/.inputrc ~/.inputrc 
+    cp -r nvim ~/.config/
 }
 copyLinuxSpecific () {
     cp i3/config $I3CONFIG
