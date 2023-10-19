@@ -38,3 +38,7 @@ unmap K
 
 nmap [m <Action>(MethodUp)
 nmap ]m <Action>(MethodDown)
+
+nnoremap <leader>db :action ToggleLineBreakpoint<CR>
+nnoremap <leader>dr :action DebugClass<CR>
+nnoremap <leader>dc :action Resume<CR>
