@@ -5,11 +5,6 @@ set ideamarks
 
 let mapleader="\\"
 
-" Workkaround Fix C-o C-t behaviour (should be fixed in future ideavim
-" versions
-nmap <C-o> :action Back<CR>
-nmap <C-i> :action Forward<CR>
-
 nmap <Leader>rn :action RenameElement<CR>
 nmap <Leader>run :action RunClass<CR>
 nmap <Leader>ca :action ShowIntentionActions<CR>
@@ -26,10 +21,10 @@ nmap t <Plug>(easymotion-bd-t)
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gc :action GotoClass<CR>
 nnoremap gi :action GotoImplementation<CR>
-nnoremap gu :action FindUsages<CR>
+" gr from go to references
+nnoremap gr :action FindUsages<CR>
 nnoremap gp :action GotToSuperMethod<CR>
-nnoremap gb :action Back<CR>
-nnoremap gf :action Forward<CR>
+nnoremap gD :action GotoTypeDeclaration<CR>
 
 nnoremap <Leader>fzf :action SearchEverywhere<CR>
 
