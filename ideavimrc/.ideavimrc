@@ -2,6 +2,7 @@ source ~/.vimrc
 
 set ideajoin
 set ideamarks
+set textobj-indent
 
 let mapleader="\\"
 
