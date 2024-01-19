@@ -74,6 +74,8 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 nnoremap <c-h> <c-w>h
 
+let mapleader="\\"
+
 " Fix for shift=tab
 exe 'set t_kB=' . nr2char(27) . '[Z'
 
@@ -109,6 +111,12 @@ Plugin 'kanitkameh/glabmr.vim'
 Plugin 'ziglang/zig.vim'
 Plugin 'rhysd/reply.vim'
 Plugin 'liuchengxu/vim-which-key'
+
+Plugin 'omrisarig13/vim-mr-interface'
+" Dependencies for omrisarig13/vim-mr-interface
+Plugin 'google/vim-maktaba'
+Plugin 'google/vim-glaive'
+Plugin 'LucHermitte/lh-vim-lib'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " To ignore plugin indent changes, instead use:
