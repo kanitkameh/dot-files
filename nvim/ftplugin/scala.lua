@@ -1,3 +1,5 @@
+local map = vim.keymap.set
+
 -- Auto format buffer on save
 vim.api.nvim_create_augroup('AutoFormatting', {})
 vim.api.nvim_create_autocmd('BufWritePre', {
@@ -7,3 +9,5 @@ vim.api.nvim_create_autocmd('BufWritePre', {
     vim.lsp.buf.format()
   end,
 })
+-- Metals worksheet show long lines
+map("n", "<leader>K",  require("metals").hover_worksheet)
