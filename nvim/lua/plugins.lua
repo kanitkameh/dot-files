@@ -24,43 +24,79 @@ local api = vim.api
 local cmd = vim.cmd
 local map = vim.keymap.set
 
+local ensure_packer = function()
+  local fn = vim.fn
+  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  if fn.empty(fn.glob(install_path)) > 0 then
+    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    vim.cmd [[packadd packer.nvim]]
+    return true
+  end
+  return false
+end
+
+local packer_bootstrap = ensure_packer()
+
 ----------------------------------
 -- PLUGINS -----------------------
 ----------------------------------
-cmd([[packadd packer.nvim]])
 require("packer").startup(function(use)
-    use {
-        'nvim-tree/nvim-tree.lua',
-        requires = {
-            'nvim-tree/nvim-web-devicons', -- optional
-        },
-    }
-    use({ "wbthomason/packer.nvim", opt = true })
+  use {
+      'nvim-tree/nvim-tree.lua',
+      requires = {
+          'nvim-tree/nvim-web-devicons', -- optional
+      },
+  }
+  use({ "wbthomason/packer.nvim", opt = true })
 
-    use({
-        "hrsh7th/nvim-cmp",
-        requires = {
-            { "hrsh7th/cmp-nvim-lsp" },
-            { "hrsh7th/cmp-vsnip" },
-            { "hrsh7th/vim-vsnip" },
-        },
-    })
-    use({
-        "scalameta/nvim-metals",
-        version = "0.11.12",
-        requires = {
-            "nvim-lua/plenary.nvim",
-            "mfussenegger/nvim-dap",
-        },
-    })
-    use {
-      'nvim-telescope/telescope.nvim',
-      requires = { {'nvim-lua/plenary.nvim'} }
-    }
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
-    }
+  use({
+      "hrsh7th/nvim-cmp",
+      requires = {
+          { "hrsh7th/cmp-nvim-lsp" },
+          { "hrsh7th/cmp-vsnip" },
+          { "hrsh7th/vim-vsnip" },
+      },
+  })
+  use({
+      "scalameta/nvim-metals",
+      version = "0.11.12",
+      requires = {
+          "nvim-lua/plenary.nvim",
+          "mfussenegger/nvim-dap",
+      },
+  })
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  use {
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate'
+  }
+
+  use {
+    "neovim/nvim-lspconfig",
+    config = function()
+        require('lualsp')
+        require'lspconfig'.pyright.setup{}
+    end
+  }
+
+  use {
+    'dgagn/diagflow.nvim',
+    config = function()
+        require('diagflow').setup()
+    end
+  }
+
+  use {
+    "github/copilot.vim"
+  }
+  -- Automatically set up your configuration after cloning packer.nvim
+  -- Put this at the end after all plugins
+  if packer_bootstrap then
+      require('packer').sync()
+  end
 end)
 
 ----------------------------------
@@ -80,6 +116,8 @@ map("n", "gws", vim.lsp.buf.workspace_symbol)
 map("n", "<leader>cl", vim.lsp.codelens.run)
 map("n", "<leader>sh", vim.lsp.buf.signature_help)
 map("n", "<leader>rn", vim.lsp.buf.rename)
+map("n", "gci",  vim.lsp.buf.incoming_calls)
+map("n", "gco",  vim.lsp.buf.outgoing_calls)
 -- map("n", "<leader>f", vim.lsp.buf.formatting)
 map("n", "<leader>ca", vim.lsp.buf.code_action)
 
@@ -125,7 +163,7 @@ map("n", "<leader>dK", function()
     require("dap.ui.widgets").hover()
 end)
 
-map("n", "<leader>dt", function()
+map("n", "<leader>db", function()
     require("dap").toggle_breakpoint()
 end)
 
@@ -160,16 +198,16 @@ cmp.setup({
         -- is no vim docs, but you can't have select = true here _unless_ you are
         -- also using the snippet stuff. So keep in mind that if you remove
         -- snippets you need to remove this select
-        ["<CR>"] = cmp.mapping.confirm({ select = true }),
+        ["<C-y>"] = cmp.mapping.confirm({ select = true }),
         -- I use tabs... some say you should stick to ins-completion but this is just here as an example
-        ["<Tab>"] = function(fallback)
+        ["<C-n>"] = function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
             else
                 fallback()
             end
         end,
-        ["<S-Tab>"] = function(fallback)
+        ["<C-p>"] = function(fallback)
             if cmp.visible() then
                 cmp.select_prev_item()
             else
@@ -223,7 +261,29 @@ dap.configurations.scala = {
     },
 }
 
+-- TODO put in separate file?
+-- Define an on_attach function for the LSP client.
+local function on_lsp_attach(client)
+    -- Check if LSP document highlighting is supported by the server.
+    if client.server_capabilities.documentHighlightProvider then
+        -- Create the autocmd and augroup for document highlighting.
+        vim.api.nvim_create_augroup('LspDocumentHighlight', { clear = true })
+        vim.api.nvim_create_autocmd({'CursorHold'}, {
+            buffer = 0,
+            group = 'LspDocumentHighlight',
+            callback = vim.lsp.buf.document_highlight
+        })
+        vim.api.nvim_create_autocmd({'CursorMoved'}, {
+            buffer = 0,
+            group = 'LspDocumentHighlight',
+            callback = vim.lsp.buf.clear_references
+        })
+    end
+end
+
 metals_config.on_attach = function(client, bufnr)
+    -- TODO dap doesn't work when uncommented
+    -- on_lsp_attach(metals_config)
     require("metals").setup_dap()
 end
 
