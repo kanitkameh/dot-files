@@ -220,3 +220,8 @@ nnoremap <leader>rc :ReplStop<CR>
 
 " vim-which-key config
 nnoremap <silent> <leader> :WhichKey '\'<CR>
+
+nnoremap <leader>mrl :MergeRequestList<CR>
+" TODO use :wq and :q instead
+nnoremap <leader>mrs :MergeRequestSubmit<CR>
+nnoremap <leader>mrc :MergeRequestCreate<CR>
