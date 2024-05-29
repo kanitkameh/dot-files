@@ -77,7 +77,7 @@ ZSH_THEME=powerlevel10k/powerlevel10k
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode)
+plugins=(git vi-mode docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -140,3 +140,6 @@ alias vim="nvim"
 git config --global core.pager "nvim -R"
 git config --global color.pager no
 export MANPAGER='nvim +Man!'
+
+# Initialize zoxide
+eval "$(zoxide init zsh)"
