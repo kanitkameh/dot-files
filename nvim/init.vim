@@ -2,6 +2,9 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.vimrc
 
+nnoremap <leader>tt :NvimTreeToggle<CR>
+nnoremap <leader>tf :NvimTreeFindFile<CR>
+
 lua require('plugins')
 
 " disable netrw at the very start of your init.lua
