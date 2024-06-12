@@ -16,6 +16,7 @@ copyLinuxSpecific(){
         echo "$I3CONFIG found"
         cp ~/.config/i3/config i3/config
     fi
+	cp ~/.config/sway/config sway/config
 }
 copyCommon () {
     if test -f "$VIMRC"; then
