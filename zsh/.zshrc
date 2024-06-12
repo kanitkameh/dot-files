@@ -135,6 +135,7 @@ alias vim=/opt/homebrew/bin/vim
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow'
 
 alias cat="bat"
+export PATH="$HOME/.local/bin:$PATH"
 
 alias vim="nvim"
 git config --global core.pager "nvim -R"
