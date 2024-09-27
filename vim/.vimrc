@@ -117,6 +117,7 @@ Plugin 'omrisarig13/vim-mr-interface'
 Plugin 'google/vim-maktaba'
 Plugin 'google/vim-glaive'
 Plugin 'LucHermitte/lh-vim-lib'
+Plugin 'kanitkameh/testsourcetoggle.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " To ignore plugin indent changes, instead use:
@@ -224,3 +225,10 @@ nnoremap <leader>mrl :MergeRequestList<CR>
 " TODO use :wq and :q instead
 nnoremap <leader>mrs :MergeRequestSubmit<CR>
 nnoremap <leader>mrc :MergeRequestCreate<CR>
+
+" toggle test source maps
+nnoremap <leader>tst :call TestSourceToggle()<CR>
+
+" switch to normal mode from terminal
+tnoremap <Esc> <C-\><C-n>
+

@@ -41,3 +41,6 @@ nmap ]m <Action>(MethodDown)
 nnoremap <leader>db :action ToggleLineBreakpoint<CR>
 nnoremap <leader>dr :action DebugClass<CR>
 nnoremap <leader>dc :action Resume<CR>
+
+" Toggle test-source
+nnoremap <leader>tst :action GotoTest<CR>
