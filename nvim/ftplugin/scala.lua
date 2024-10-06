@@ -9,5 +9,3 @@ vim.api.nvim_create_autocmd('BufWritePre', {
     vim.lsp.buf.format()
   end,
 })
--- Metals worksheet show long lines
-map("n", "<leader>K",  require("metals").hover_worksheet)
