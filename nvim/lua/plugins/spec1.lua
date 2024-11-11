@@ -245,6 +245,7 @@ return {
     },
     keys = {
       {'<leader>/', '<cmd>Telescope live_grep<cr>', desc = 'Search in Telescope'},
+      {'<leader>ff', '<cmd>Telescope find_files<cr>', desc = 'Find Files in Telescope'},
     }
   },
 
