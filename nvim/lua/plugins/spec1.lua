@@ -252,7 +252,9 @@ return {
   {
       'nvim-treesitter/nvim-treesitter',
       build = ':TSUpdate',
+      opts_extend = { "ensure_installed" },
       opts = {
+        ensure_installed = 'all',
         highlight = {
           enable = true,
         },
