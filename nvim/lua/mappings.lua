@@ -21,7 +21,7 @@ map("n", "<leader>sh", vim.lsp.buf.signature_help, { desc = "Signature help"})
 map("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename"})
 map("n", "gci",  vim.lsp.buf.incoming_calls, { desc = "Incoming Calls"})
 map("n", "gco",  vim.lsp.buf.outgoing_calls, { desc = "Outgoing Calls"})
-map("n", "<leader>f", vim.lsp.buf.format, { desc = "Format"})
+map("n", "<leader>=", vim.lsp.buf.format, { desc = "Format"})
 map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Action"})
 
 map("n", "<leader>ws", function()
