@@ -29,6 +29,7 @@ copyCommon () {
 }
 copyLinuxSpecific () {
     cp i3/config $I3CONFIG
+    cp sway/config ~/.config/sway/config 
 }
 
 case $1 in 

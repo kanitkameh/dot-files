@@ -36,6 +36,7 @@ copyCommon () {
     cp $IDEAVIMRC ideavimrc/
     cp ~/.inputrc jline/.inputrc
     cp -r ~/.config/nvim .
+    cp -r ~/.vim ./vim/
 }
 copyMacSpecific () {
         if test -f "$YABAIRC"; then
