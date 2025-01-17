@@ -1,21 +1,21 @@
 # install essentials
-sudo apt install git wget
+sudo apt install -y git wget
 
-sudo apt install zsh
+sudo apt install -y zsh
 # installing ohmyzsh
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 # installing powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-sudo apt install neovim
-sudo apt install ripgrep 
-sudo apt install ranger
+sudo apt install -y neovim
+sudo apt install -y ripgrep 
+sudo apt install -y ranger
 
-sudo apt install bat
+sudo apt install -y bat
 mkdir -p ~/.local/bin
 ln -s /usr/bin/batcat ~/.local/bin/bat
-sudo apt install zoxide
+sudo apt install -y zoxide
 
-sudo apt install sway i3blocks
-sudo apt install network-manager
+sudo apt install -y sway i3blocks
+sudo apt install -y network-manager
