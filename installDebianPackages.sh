@@ -18,3 +18,4 @@ ln -s /usr/bin/batcat ~/.local/bin/bat
 sudo apt install zoxide
 
 sudo apt install sway i3blocks
+sudo apt install network-manager
