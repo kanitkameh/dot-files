@@ -123,6 +123,7 @@ export PATH="/usr/local/sbin:$PATH"
 # For managing multiple java versions 
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+jenv enable-plugin export
 
 # For managing node versions
 export NVM_DIR="$HOME/.nvm"

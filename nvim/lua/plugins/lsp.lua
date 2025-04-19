@@ -141,6 +141,7 @@ return {
         "j-hui/fidget.nvim"
     },
     config = function()
+        require'lspconfig'.rust_analyzer.setup{}
         require('lualsp')
         require'lspconfig'.pyright.setup{}
     end
