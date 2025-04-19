@@ -1,5 +1,5 @@
 # install essentials
-sudo apt install -y git wget
+sudo apt install -y git wget curl
 
 sudo apt install -y zsh
 # installing ohmyzsh
