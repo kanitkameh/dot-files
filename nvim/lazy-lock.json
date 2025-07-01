@@ -46,6 +46,7 @@
   "vim-mr-interface": { "branch": "master", "commit": "cb5a68be44cb0c6a4fcb0aaf8c1044579ecfbe8f" },
   "vim-paragraph-motion": { "branch": "master", "commit": "2f6b36670327952b0bcc6915f4947feb85977af3" },
   "vim-smoothie": { "branch": "master", "commit": "df1e324e9f3395c630c1c523d0555a01d2eb1b7e" },
+  "vim-speeddating": { "branch": "master", "commit": "c17eb01ebf5aaf766c53bab1f6592710e5ffb796" },
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
   "vim-vsnip": { "branch": "master", "commit": "02a8e79295c9733434aab4e0e2b8c4b7cea9f3a9" },
   "which-key.nvim": { "branch": "main", "commit": "68e37e12913a66b60073906f5d3f14dee0de19f2" },
