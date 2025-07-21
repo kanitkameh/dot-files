@@ -10,7 +10,8 @@ return {
     end,
   },
 
-  { "folke/which-key.nvim", lazy = false , opts = {} ,
+  {
+    "folke/which-key.nvim", lazy = false , opts = {} ,
     keys = {
       {
         "<leader>?",
@@ -81,7 +82,14 @@ return {
 
   {'dbakker/vim-paragraph-motion'},
 
-  {'easymotion/vim-easymotion'},
+  {'tpope/vim-repeat'},
+
+  {
+    'easymotion/vim-easymotion',
+    dependencies = {
+      'tpope/vim-repeat',
+    }
+  },
 
   {'tpope/vim-commentary'},
 
