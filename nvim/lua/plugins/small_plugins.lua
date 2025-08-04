@@ -122,8 +122,6 @@ return {
 
   {'kanitkameh/testsourcetoggle.vim'},
 
-  { "nvim-lua/plenary.nvim" },
-
   { "tpope/vim-speeddating" },
 
 }
