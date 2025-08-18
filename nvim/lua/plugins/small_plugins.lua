@@ -88,7 +88,18 @@ return {
     'easymotion/vim-easymotion',
     dependencies = {
       'tpope/vim-repeat',
-    }
+    },
+    keys ={
+      {'f', '<Plug>(easymotion-overwin-f)', desc = 'EasyMotion Find'},
+      {'F', '<Plug>(easymotion-overwin-F)', desc = 'EasyMotion Find Backwards'},
+      {'t', '<Plug>(easymotion-overwin-t)', desc = 'EasyMotion Till'},
+      {'T', '<Plug>(easymotion-overwin-T)', desc = 'EasyMotion Till Backwards'},
+    },
+    config = function()
+      vim.g.EasyMotion_do_mapping = 0 -- disable default mappings
+      vim.g.EasyMotion_smartcase = 1 -- enable smart case
+      vim.g.EasyMotion_keys = 'qwertyuiopasdfghjklzxcvbnm'
+    end
   },
 
   {'tpope/vim-commentary'},
@@ -101,15 +112,38 @@ return {
 
   {'machakann/vim-highlightedyank'},
 
-  {'AndrewRadev/yankwin.vim'},
+  {
+    'AndrewRadev/yankwin.vim',
+    keys = {
+      {'<c-w>vp', '<cmd>call yankwin#Paste({"edit_command": "rightbelow vertical split"})<CR>', desc = 'YankWin Paste Right Split'},
+      {'<c-w>vP', '<cmd>call yankwin#Paste({"edit_command": "leftabove vertical split"})<CR>', desc = 'YankWin Paste Left Split'},
+    }
+  },
 
   {'psliwka/vim-smoothie'},
 
-  {'kanitkameh/glabmr.vim'},
+  {
+    'kanitkameh/glabmr.vim',
+    keys = {
+      {'<leader>mrl', '<cmd>MergeRequestList<CR>', desc = 'Glab MR List'},
+      {'<leader>mrc', '<cmd>MergeRequestCreate<CR>', desc = 'Glab MR Create'},
+      -- TODO use :wq and :q instead
+      {'<leader>mrs', '<cmd>MergeRequestSubmit<CR>', desc = 'Glab MR Submit'},
+    }
+  },
 
   {'ziglang/zig.vim'},
 
-  {'rhysd/reply.vim'},
+  {
+    'rhysd/reply.vim',
+    keys = {
+        {'<leader>rs', '<cmd>ReplSend<CR>', desc = 'Repl Send'},
+        {'<leader>rr', '<cmd>ReplRecv<CR>', desc = 'Repl Recv'},
+        {'<leader>ro', '<cmd>Repl<CR>', desc = 'Repl Open'},
+        {'<leader>ra', '<cmd>ReplAuto<CR>', desc = 'Repl Auto'},
+        {'<leader>rc', '<cmd>ReplStop<CR>', desc = 'Repl Stop'},
+    }
+  },
 
   {
     'omrisarig13/vim-mr-interface',
@@ -120,7 +154,12 @@ return {
     }
   },
 
-  {'kanitkameh/testsourcetoggle.vim'},
+  {
+    'kanitkameh/testsourcetoggle.vim',
+    keys = {
+      {'<leader>tst', '<cmd>TestSourceToggle<CR>', desc = 'Test Source Toggle'},
+    }
+  },
 
   { "tpope/vim-speeddating" },
 
