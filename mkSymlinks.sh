@@ -3,18 +3,21 @@ IDEAVIMRC=~/.ideavimrc
 BASHRC=~/.bashrc 
 WARPDCONFIG=~/.config/warpd/config
 KMONADKEYBOARD=~/Documents/kmonad-config
-
 I3CONFIG=~/.config/i3/config
+
 copyMacSpecific () {
-    # Mac Specific
-    YABAIRC=~/.yabairc 
+    # Aerospace is a replacement for yabai
+    # YABAIRC=~/.yabairc 
+    AEROSPACE=~/.aerospace.toml
     SPACEBARRC=~/.config/spacebar/spacebarrc 
     SKHDRC=~/.skhdrc
-    ln -s $PWD/yabai/.yabairc $YABAIRC
+    # ln -s $PWD/yabai/.yabairc $YABAIRC
+    ln -s $PWD/aerospace/aerospace.toml $AEROSPACE
     ln -s $PWD/spacebar/spacebarrc $SPACEBARRC
     ln -s $PWD/skhd/.skhdrc $SKHDRC
     ln -s $PWD/vscode/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
 }
+
 copyCommon () {
     ln -s $PWD/vim/.vimrc $VIMRC
     ln -s $PWD/vim/.vim ~/.vim
@@ -28,6 +31,7 @@ copyCommon () {
     ln -s $PWD/jline/.inputrc ~/.inputrc 
     ln -s $PWD/nvim ~/.config/nvim
 }
+
 copyLinuxSpecific () {
     ln -s $PWD/i3/config $I3CONFIG
     ln -s $PWD/sway/config ~/.config/sway/config 
