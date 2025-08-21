@@ -216,4 +216,18 @@ bar {
     }
 }
 
+
+# Function keys
+    # Brightness controls
+    bindsym XF86MonBrightnessUp exec brightnessctl set +10%
+    bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+
+    # Audio volume
+    bindsym XF86AudioRaiseVolume exec pamixer -i 5
+    bindsym XF86AudioLowerVolume exec pamixer -d 5
+    bindsym XF86AudioMute exec pamixer -t
+    # Microphone mute
+    bindsym XF86AudioMicMute exec pamixer --default-source -t
+
+
 include /etc/sway/config.d/*

@@ -19,3 +19,8 @@ sudo apt install -y zoxide
 
 sudo apt install -y sway i3blocks
 sudo apt install -y network-manager
+sudo apt install -y brightnessctl
+
+# Audio management
+sudo apt install pipewire wireplumber pavucontrol pamixer
+systemctl --user enable --now pipewire.service pipewire-pulse.service wireplumber.service
