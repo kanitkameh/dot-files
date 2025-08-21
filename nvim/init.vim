@@ -1,6 +1,6 @@
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
-source ~/.vim/plugin/settings.vim
+source ~/.config/nvim/plugin/settings.vim
 
 " disable netrw at the very start of your init.lua
 lua vim.g.loaded_netrw = 1
